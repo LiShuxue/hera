@@ -35,7 +35,7 @@ import android.content.res.AssetManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.facebook.stetho.Stetho;
@@ -115,9 +115,8 @@ public class HeraService extends Service {
      * @param context
      */
     private static void initFramework(Context context) {
-        SharedPreferences preferences = SharePreferencesUtil.getSharedPreference(context, "hera");
-        if (!StorageUtil.isFrameworkExists(context)
-                || preferences.getBoolean(AppConfig.getHostVersion(context), true)) {
+        boolean needUpdate = SharePreferencesUtil.loadBoolean(context, AppConfig.getHostVersion(context), true);
+        if (!StorageUtil.isFrameworkExists(context) || needUpdate) {
             FrameworkInitTask task = new FrameworkInitTask(context);
             task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }

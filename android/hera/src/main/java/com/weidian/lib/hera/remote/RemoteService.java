@@ -36,8 +36,9 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.support.annotation.Nullable;
 import android.util.Pair;
+
+import androidx.annotation.Nullable;
 
 import com.weidian.lib.hera.api.ApisManager;
 import com.weidian.lib.hera.interfaces.IApi;

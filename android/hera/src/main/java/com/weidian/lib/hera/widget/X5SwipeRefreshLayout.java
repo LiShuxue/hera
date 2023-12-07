@@ -27,9 +27,10 @@
 package com.weidian.lib.hera.widget;
 
 import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.tencent.smtt.sdk.WebView;
 

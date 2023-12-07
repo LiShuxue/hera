@@ -1,7 +1,9 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile project(':hera')
+    implementation 'androidx.core:core:1.2.0'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
+    implementation project(':hera')
 }
 
 android {

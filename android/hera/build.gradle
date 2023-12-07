@@ -1,20 +1,18 @@
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:design:25.3.1'
-
-    compile "com.github.bumptech.glide:glide:3.7.0"
-    compile 'com.squareup.okhttp3:okhttp:3.7.0'
-    compile 'com.google.code.gson:gson:2.8.1'
-    compile 'com.google.zxing:android-core:3.3.0'
-    compile 'com.google.zxing:core:3.3.0'
-
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'me.iwf.photopicker:PhotoPicker:0.9.5@aar'
-
-    compile 'com.facebook.stetho:stetho:1.5.0'
-    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+    implementation 'androidx.core:core:1.2.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0-alpha1'
+    implementation "com.github.bumptech.glide:glide:3.7.0"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+//noinspection GradleDependency 注意：zxing 3.4.0开始，扫码只支
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'me.iwf.photopicker:PhotoPicker:0.9.5@aar'
+    implementation 'com.tencent.tbs:tbssdk:44286'
+    implementation 'com.facebook.stetho:stetho:1.6.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.6.0'
 }
 
 android {

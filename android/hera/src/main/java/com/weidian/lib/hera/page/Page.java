@@ -32,7 +32,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.net.Uri;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +43,8 @@ import com.tencent.smtt.sdk.WebView;
 
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
+
 
 import com.weidian.lib.hera.R;
 import com.weidian.lib.hera.config.AppConfig;
