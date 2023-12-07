@@ -28,9 +28,10 @@
 package com.weidian.lib.hera.api.file;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
+
+import androidx.annotation.NonNull;
 import com.weidian.lib.hera.api.AbsModule;
 import com.weidian.lib.hera.api.HeraApi;
 import com.weidian.lib.hera.config.AppConfig;
