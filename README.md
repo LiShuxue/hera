@@ -10,10 +10,10 @@ Hera 是一个用小程序方式来写跨平台应用的开发框架，使用它
 :warning: 注意：master 分支内容过旧，一些问题在 dev 分支上已经解决了，[点我查看构建指南链接](https://github.com/weidian-inc/hera/blob/master-dev/docs/zh-cn/Quickstart/BuildWithSourceCode.md) :warning:
 ## 快速体验
 
-安装脚手架
+安装脚手架(npm config set registry http://10.87.57.26:8082/nexus/repository/npm-pub/)
 
 ```sh
-npm i hera-cli -g
+npm i sb-hera-cli -g
 ```
 
 初始化项目
@@ -25,9 +25,9 @@ hera init projectName
 运行于浏览器中：
 
 ```sh
-hera run web
+hera run web/android/ios
 ```
-
+android 原生项目使用请引入依赖： implementation "com.simbest.android:sb_hera:1.0.0"（需在内网nexus仓库）
 运行于客户端上请参考：[快速上手](https://weidian-inc.github.io/hera/#/basics/quickstart)
 
 ## 开发相关
