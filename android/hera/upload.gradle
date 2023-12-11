@@ -1,0 +1,25 @@
+apply plugin: 'maven'
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            // 仓库地址
+            repository(url: "http://10.87.57.26:8082/nexus/repository/releases/") {
+                // 用户校验 用户名/密码
+                authentication(userName: "admin", password: "admin123")
+            }
+            // 快照仓库地址（可选）
+            snapshotRepository(url: "http://10.87.57.26:8082/nexus/repository/snapshots/") {
+                // 用户校验 用户名/密码
+                authentication(userName: "admin", password: "admin123")
+            }
+
+            pom.project {
+                version VERSION_NAME // artifact版本
+                artifactId ARTIFACTID // artifact id
+                groupId "com.simbest.android" // artifact所属Group Id
+                packaging "aar" // 文件格式，例如jar、aar
+            }
+        }
+    }
+}
